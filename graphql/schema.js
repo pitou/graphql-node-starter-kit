@@ -1,7 +1,6 @@
 var type = require('graphql/type');
 
 var queries = require('./queries');
-var mutations = require('./mutations');
 
 module.exports = new type.GraphQLSchema({
 
@@ -14,12 +13,4 @@ module.exports = new type.GraphQLSchema({
             };
         },
     }),
-    mutation: new type.GraphQLObjectType({
-        name: 'RootMutationType',
-        fields: function() {
-            return {
-                updateGameRating: mutations.updateGameRating,
-            };
-        },
-    })
 });
