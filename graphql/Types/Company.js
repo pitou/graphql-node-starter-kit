@@ -22,6 +22,9 @@ module.exports.Company = new type.GraphQLObjectType({
             gamesAsDeveloper: {
                 type: new type.GraphQLList(require('../types').Game),
                 description: 'The games created as a developer',
+                args: {
+                    platform: { type: type.GraphQLString },
+                },
                 resolve: function(parent, args, ast) {
                     // parent is the company object
                     args.developerName = parent.name;
@@ -34,6 +37,9 @@ module.exports.Company = new type.GraphQLObjectType({
             gamesAsPublisher: {
                 type: new type.GraphQLList(require('../types').Game),
                 description: 'The games created as a publisher',
+                args: {
+                    platform: { type: type.GraphQLString },
+                },
                 resolve: function(parent, args, ast) {
                     // parent is the company object
                     args.publisherName = parent.name;
