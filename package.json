@@ -1,0 +1,25 @@
+{
+  "name": "graphql-node-starter-kit",
+  "version": "1.0.0",
+  "description": "Starter kit for Node.js implementation of GraphQL",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poetcyborg/graphql-node-starter-kit.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "node"
+  ],
+  "author": "Vito Latrofa",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "express-graphql": "^0.4.5",
+    "graphql": "^0.4.14"
+  }
+}
