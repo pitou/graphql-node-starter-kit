@@ -1,4 +1,4 @@
 module.exports = {
     companies: require('./Queries/companies').companies,
-    game: require('./Queries/game').game,
+    games: require('./Queries/games').games,
 };

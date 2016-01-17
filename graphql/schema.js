@@ -10,7 +10,7 @@ module.exports = new type.GraphQLSchema({
         fields: function() {
             return {
                 companies: queries.companies,
-                game: queries.game,
+                games: queries.games,
             };
         },
     }),

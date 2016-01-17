@@ -1,7 +1,7 @@
 var type = require('graphql/type');
 var Game = require('../types').Game;
 
-module.exports.game = {
+module.exports.games = {
     type: new type.GraphQLList(Game),
     args: {
         id: { type: type.GraphQLInt },
