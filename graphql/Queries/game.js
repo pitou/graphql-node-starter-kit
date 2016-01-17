@@ -4,6 +4,7 @@ var Game = require('../types').Game;
 module.exports.game = {
     type: new type.GraphQLList(Game),
     args: {
+        id: { type: type.GraphQLInt },
         title: { type: type.GraphQLString },
         platform: { type: type.GraphQLString },
     },

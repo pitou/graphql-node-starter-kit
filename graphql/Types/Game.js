@@ -1,4 +1,6 @@
 var type = require('graphql/type');
+var companiesData = require('../../data/companies_data');
+var utils = require('../../utils');
 
 module.exports.Game = new type.GraphQLObjectType({
     name: 'Game',
@@ -21,13 +23,29 @@ module.exports.Game = new type.GraphQLObjectType({
                 type: type.GraphQLString,
                 description: 'The platform where the game was made for',
             },
-            developers: {
+            developer: {
                 type: require('../types').Company,
                 description: 'The developer of the game',
+                resolve: function(parent, args, ast) {
+                    // parent is the game object
+                    args.name = parent.developerName;
+
+                    console.log("Game -> company args: " + JSON.stringify(args));
+
+                    return utils.filterData(companiesData, args)[0];
+                }
             },
-            publishers: {
+            publisher: {
                 type: require('../types').Company,
                 description: 'The publisher of the game',
+                resolve: function(parent, args, ast) {
+                    // parent is the game object
+                    args.name = parent.publisherName;
+
+                    console.log("Game -> company args: " + JSON.stringify(args));
+
+                    return utils.filterData(companiesData, args)[0];
+                }
             },
         };
     },
