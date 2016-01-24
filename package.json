@@ -8,6 +8,7 @@
     "url": "https://github.com/poetcyborg/graphql-node-starter-kit.git"
   },
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
